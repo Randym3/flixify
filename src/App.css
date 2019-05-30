@@ -1,33 +1,67 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to right, #1f1c18 50%, #8e0900c9) !important;
+  background-repeat: no-repeat;
+  font-family: "Source Sans Pro", Arial, sans-serif !important;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.banner-gradient {
+  height: 700px;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.banner-gradient-details {
+  background-size: contain;
+  position: relative;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 992px) {
+  .banner-gradient-details {
+    height: 500px;
   }
-  to {
-    transform: rotate(360deg);
+}
+div .film-info {
+  position: relative;
+  top: 50%;
+}
+nav.topnav {
+  transition: all 0.3s ease-in-out;
+}
+div.slick-initialized .slick-slide {
+  padding: 30px;
+}
+div.card {
+  background-color: transparent;
+  border: 0;
+  color: #ffffffc4;
+}
+
+div.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+iframe.youtubeModal {
+  margin: 0 10%;
+}
+@media (max-width: 992px) {
+  iframe.youtubeModal {
+    margin: 0 0;
+    width: 450px;
   }
+}
+
+@media (max-width: 550px) {
+  iframe.youtubeModal {
+    margin: 0 2%;
+    width: 350px;
+  }
+}
+
+button.slick-next {
+  right: -1px;
+}
+button.slick-prev {
+  left: -1px;
 }

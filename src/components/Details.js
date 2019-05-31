@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import noImage from "../noImage.png";
+import Loading from "./pages/Loading";
 
 import {
   Col,
@@ -232,6 +233,7 @@ export class Details extends Component {
             </p>
           )}
         </Container>
+        <Loading />
       </div>
     );
   }

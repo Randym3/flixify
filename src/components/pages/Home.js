@@ -6,7 +6,15 @@ import StudioGhibli from "../MovieLists/StudioGhibli";
 import ComedyDramaTV from "../MovieLists/ComedyDramaTV";
 import PopularTV from "../MovieLists/PopularTV";
 import Discover from "../Discover";
+import Loading from "./Loading";
+
 export class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoaded: false
+    };
+  }
   render() {
     return (
       <div>
@@ -17,6 +25,7 @@ export class Home extends Component {
         <StudioGhibli />
         <PopularTV />
         <ComedyDramaTV />
+        <Loading />
       </div>
     );
   }

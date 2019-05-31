@@ -4,6 +4,8 @@ import queryString from "query-string";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import noImage from "../noImage.png";
+import Loading from "./pages/Loading";
+
 export class SearchResults extends Component {
   constructor(props) {
     super(props);
@@ -60,7 +62,7 @@ export class SearchResults extends Component {
                   </p>
                 ) : (
                   <p>
-                    No ratings <i class="fas fa-frown" />
+                    No ratings <i className="fas fa-frown" />
                   </p>
                 )}
 
@@ -79,6 +81,7 @@ export class SearchResults extends Component {
             );
           })}
         </Row>
+        <Loading />
       </div>
     );
   }

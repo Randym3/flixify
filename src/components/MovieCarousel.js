@@ -34,11 +34,20 @@ export default class MovieCarousel extends Component {
     console.log(playingMovies);
     return (
       <div className="p-2 ">
-        <h1 className=" pt-1 text-white text-center">{this.props.title}</h1>
+        <h1
+          className=" pt-1 text-white text-center wow fadeIn"
+          data-wow-delay=".2s"
+        >
+          {this.props.title}
+        </h1>
         <Slider {...SliderSettings}>
-          {playingMovies.map(cur => {
+          {playingMovies.map((cur, i) => {
             return cur.backdrop_path ? (
-              <Card key={cur.id} className="text-white">
+              <Card
+                key={cur.id}
+                className="text-white wow fadeIn"
+                data-wow-delay={`${0.1 * i.toString()}s`}
+              >
                 <Card.Img
                   variant="top"
                   src={

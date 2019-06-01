@@ -99,7 +99,10 @@ export class Details extends Component {
         }}
       >
         <Container>
-          <Row className="  align-items-center justify-content-center">
+          <Row
+            className=" wow fadeIn align-items-center justify-content-center"
+            data-wow-delay=".7s"
+          >
             <Col className="text-center py-4" md={3}>
               {" "}
               <img
@@ -166,18 +169,28 @@ export class Details extends Component {
               </p>
             </Col>
           </Row>
+          <section className="wow fadeIn" data-wow-delay=".7s">
+            <h1 className=" pt-5 text-white text-center">Top Cast Members</h1>
 
-          <h1 className=" pt-5 text-white text-center">Top Cast Members</h1>
+            <CastList cast={cast} />
+          </section>
 
-          <CastList cast={cast} />
-
-          <h1 className=" pt-5 text-white text-center">Recommendations</h1>
+          <h1
+            className=" pt-5 text-white text-center wow fadeIn"
+            data-wow-delay=".2s"
+          >
+            Recommendations
+          </h1>
 
           {similar.length > 0 ? (
             <Slider {...SliderSettings}>
-              {similar.map(cur => {
+              {similar.map((cur, i) => {
                 return cur.backdrop_path ? (
-                  <Card key={cur.id} className="text-white">
+                  <Card
+                    className="text-white wow fadeIn"
+                    data-wow-delay={`${0.1 * i.toString()}s`}
+                    key={cur.id}
+                  >
                     <Card.Img
                       variant="top"
                       src={

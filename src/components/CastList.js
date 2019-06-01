@@ -9,7 +9,11 @@ export class CastList extends Component {
       <Row className="text-center align-items-end">
         {cast.map((cur, i) => {
           return (
-            <Col key={i}>
+            <Col
+              className="text-white wow fadeIn"
+              data-wow-delay={`${0.2 * i.toString()}s`}
+              key={i}
+            >
               <img
                 alt={cur.name}
                 style={{

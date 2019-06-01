@@ -34,12 +34,19 @@ export class SearchResults extends Component {
     console.log(searchResults);
 
     return (
-      <div className="container text-white text-center">
+      <div className="container text-white text-center ">
         <h2 className="py-5">Search Results for: " {query.toUpperCase()} "</h2>
-        <Row className="text-center align-items-end ">
+        <Row
+          className="text-center align-items-end wow fadeIn"
+          data-wow-delay=".7s"
+        >
           {searchResults.map((cur, i) => {
             return (
-              <Col key={i}>
+              <Col
+                className="text-white wow fadeIn"
+                data-wow-delay={`${0.2 * i.toString()}s`}
+                key={i}
+              >
                 <img
                   alt={cur.name}
                   style={{

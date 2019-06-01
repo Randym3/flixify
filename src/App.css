@@ -4,22 +4,18 @@ body {
   font-family: "Source Sans Pro", Arial, sans-serif !important;
 }
 .banner-gradient {
-  height: 700px;
+  height: 95vh;
   background-size: cover;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
 }
 .banner-gradient-details {
-  background-size: contain;
+  height: 95vh;
+  background-size: cover;
   position: relative;
-  background-position: 50% 30%;
+  background-position: center;
   background-repeat: no-repeat;
-}
-@media (min-width: 992px) {
-  .banner-gradient-details {
-    height: 500px;
-  }
 }
 div .film-info {
   position: relative;

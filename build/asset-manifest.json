@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e6f3150.chunk.css",
-    "main.js": "/static/js/main.3d9ddf9f.chunk.js",
-    "main.js.map": "/static/js/main.3d9ddf9f.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.dcce4771.chunk.css": "/static/css/2.dcce4771.chunk.css",
-    "static/js/2.dc3c3e6c.chunk.js": "/static/js/2.dc3c3e6c.chunk.js",
-    "static/js/2.dc3c3e6c.chunk.js.map": "/static/js/2.dc3c3e6c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9cf93f135081bbebaba995f3bdb2ef09.js": "/precache-manifest.9cf93f135081bbebaba995f3bdb2ef09.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.dcce4771.chunk.css.map": "/static/css/2.dcce4771.chunk.css.map",
-    "static/css/main.1e6f3150.chunk.css.map": "/static/css/main.1e6f3150.chunk.css.map",
-    "static/media/noImage.png": "/static/media/noImage.2246dc72.png",
-    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
+    "main.css": "/flixify/static/css/main.1e6f3150.chunk.css",
+    "main.js": "/flixify/static/js/main.a9cb31cf.chunk.js",
+    "main.js.map": "/flixify/static/js/main.a9cb31cf.chunk.js.map",
+    "runtime~main.js": "/flixify/static/js/runtime~main.6493c70a.js",
+    "runtime~main.js.map": "/flixify/static/js/runtime~main.6493c70a.js.map",
+    "static/css/2.bc131c05.chunk.css": "/flixify/static/css/2.bc131c05.chunk.css",
+    "static/js/2.bc8494dd.chunk.js": "/flixify/static/js/2.bc8494dd.chunk.js",
+    "static/js/2.bc8494dd.chunk.js.map": "/flixify/static/js/2.bc8494dd.chunk.js.map",
+    "index.html": "/flixify/index.html",
+    "precache-manifest.3c833d2308e7a49c235484638e793488.js": "/flixify/precache-manifest.3c833d2308e7a49c235484638e793488.js",
+    "service-worker.js": "/flixify/service-worker.js",
+    "static/css/2.bc131c05.chunk.css.map": "/flixify/static/css/2.bc131c05.chunk.css.map",
+    "static/css/main.1e6f3150.chunk.css.map": "/flixify/static/css/main.1e6f3150.chunk.css.map",
+    "static/media/noImage.png": "/flixify/static/media/noImage.2246dc72.png",
+    "static/media/slick-theme.css": "/flixify/static/media/slick.f97e3bbf.svg"
   }
 }

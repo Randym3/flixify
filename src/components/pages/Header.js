@@ -17,7 +17,9 @@ class Header extends Component {
 
   onSearchSubmit = e => {
     e.preventDefault();
-    window.location.href = `/mysearch/?query=${this.state.searchField}`;
+    window.location.href = `/flixify/#/mysearch/?query=${
+      this.state.searchField
+    }`;
   };
 
   render() {
@@ -29,7 +31,7 @@ class Header extends Component {
         bg="warning"
         variant="light"
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/flixify/#">
           <img
             src={logo}
             width="50"

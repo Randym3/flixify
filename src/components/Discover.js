@@ -1,35 +1,17 @@
 import React, { Component } from "react";
 import { Carousel, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import ReadMoreAndLess from "react-read-more-less";
+import { connect } from "react-redux";
+import { getDiscover } from "../actions/movieActions";
 
-const apiKey = "170638d59cd41f58852a2f12564d2503";
 export class Discover extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      movies: [],
-      isLoaded: null
-    };
-  }
-
-  getMovies = async api => {
-    this.setState({ isLoaded: false });
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${api}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
-    );
-    const data = res.data.results;
-    this.setState({ movies: data });
-    this.setState({ isLoaded: true });
-  };
-
   componentDidMount() {
-    this.getMovies(apiKey);
+    this.props.getDiscover();
   }
 
   render() {
-    const { movies } = this.state;
+    const { movies } = this.props;
 
     return (
       <div className="wow fadeIn" data-wow-delay=".7s">
@@ -77,4 +59,11 @@ export class Discover extends Component {
   }
 }
 
-export default Discover;
+const mapStateToProps = state => ({
+  movies: state.home.discover
+});
+
+export default connect(
+  mapStateToProps,
+  { getDiscover }
+)(Discover);

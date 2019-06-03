@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import axios from "axios";
+
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { SliderSettings } from "./pages/SliderSettings";
@@ -8,30 +8,11 @@ import { SliderSettings } from "./pages/SliderSettings";
 import noImage from "../noImage.png";
 
 export default class MovieCarousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playingMovies: []
-    };
-  }
-
-  getMovies = async () => {
-    try {
-      const res = await axios.get(this.props.apiUrl);
-      const data = res.data.results;
-      this.setState({ playingMovies: data });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  componentDidMount() {
-    this.getMovies();
-  }
+  componentDidMount() {}
 
   render() {
-    const { playingMovies } = this.state;
-    console.log(playingMovies);
+    const { movies } = this.props;
+    console.log(movies);
     return (
       <div className="p-2 ">
         <h1
@@ -41,7 +22,7 @@ export default class MovieCarousel extends Component {
           {this.props.title}
         </h1>
         <Slider {...SliderSettings}>
-          {playingMovies.map((cur, i) => {
+          {movies.map((cur, i) => {
             return cur.backdrop_path ? (
               <Card
                 key={cur.id}

@@ -3,6 +3,9 @@ import Header from "./components/pages/Header";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { Provider } from "react-redux";
+
+import store from "./store";
 
 import Home from "./components/pages/Home";
 import Details from "./components/Details";
@@ -13,18 +16,20 @@ import About from "./components/pages/About";
 export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/details/:type/:id" component={Details} />
-            <Route exact path="/tvdetails/:type/:id" component={TVDetails} />
-            <Route exact path="/results" component={SearchResults} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-        </BrowserRouter>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <BrowserRouter>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/details/:type/:id" component={Details} />
+              <Route exact path="/tvdetails/:type/:id" component={TVDetails} />
+              <Route exact path="/results" component={SearchResults} />
+              <Route exact path="/about" component={About} />
+            </Switch>
+          </BrowserRouter>
+        </div>
+      </Provider>
     );
   }
 }

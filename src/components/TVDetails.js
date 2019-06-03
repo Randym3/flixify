@@ -13,81 +13,36 @@ import {
   Card
 } from "react-bootstrap";
 
-import axios from "axios";
 import YoutubeModal from "./pages/YoutubeModal";
 import CastList from "./CastList";
 import { SliderSettings } from "./pages/SliderSettings";
+import { connect } from "react-redux";
+import { getTv } from "../actions/tvActions";
+import { getCast, getTrailer, getSimilar } from "../actions/movieActions";
 
-const apiKey = "170638d59cd41f58852a2f12564d2503";
 export class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      details: {},
-      similar: [],
-      genres: [],
-      trailer: "",
-      cast: [],
       modalShow: false
     };
   }
-
-  getTvDetails = async api => {
-    const { id, type } = this.props.match.params;
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/${type}/${id}?api_key=${api}`
-    );
-
-    this.setState({
-      details: res.data,
-      genres: res.data.genres.map(cur => cur.name)
-    });
-  };
-  getMovieCast = async api => {
-    const { id, type } = this.props.match.params;
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/${type}/${id}/credits?api_key=${api}`
-    );
-    this.setState({ cast: res.data.cast.slice(0, 5) });
-  };
-  getTvTrailer = async api => {
-    try {
-      const { id, type } = this.props.match.params;
-      const res = await axios.get(
-        `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${apiKey}&language=en-US`
-      );
-
-      res.data.results.length >= 1
-        ? this.setState({ trailer: res.data.results[0].key })
-        : this.setState({ trailer: "noid" });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  getSimilar = async api => {
-    const { id, type } = this.props.match.params;
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/${type}/${id}/similar?api_key=${api}&language=en-US&page=1`
-    );
-
-    this.setState({
-      similar: res.data.results
-    });
-  };
 
   modalClose = () => {
     this.setState({ modalShow: false });
   };
 
   componentDidMount() {
-    this.getTvDetails(apiKey);
-    this.getTvTrailer(apiKey);
-    this.getMovieCast(apiKey);
-    this.getSimilar(apiKey);
+    const { type, id } = this.props.match.params;
+    const { getTv, getCast, getTrailer, getSimilar } = this.props;
+    getTv(type, id);
+    getCast(type, id);
+    getTrailer(type, id);
+    getSimilar(type, id);
   }
   render() {
-    const { details, trailer, genres, modalShow, cast, similar } = this.state;
+    const { modalShow } = this.state;
+    const { details, trailer, genres, cast, similar } = this.props.details;
     const fullYear = String(details.first_air_date).slice(0, 4);
 
     return (
@@ -254,4 +209,16 @@ export class Details extends Component {
   }
 }
 
-export default Details;
+const mapStateToProps = state => ({
+  details: state.details
+});
+
+export default connect(
+  mapStateToProps,
+  {
+    getTv,
+    getCast,
+    getTrailer,
+    getSimilar
+  }
+)(Details);

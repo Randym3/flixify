@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import queryString from "query-string";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import noImage from "../noImage.png";
 import Loading from "./pages/Loading";
+import { connect } from "react-redux";
+import { getSearchResults, getDetails } from "../actions/searchActions";
 
 export class SearchResults extends Component {
   constructor(props) {
@@ -14,24 +16,14 @@ export class SearchResults extends Component {
     };
   }
 
-  getSearchResults = () => {
-    const { query } = queryString.parse(this.props.location.search);
-
-    axios
-      .get(
-        `https://api.themoviedb.org/3/search/multi?api_key=170638d59cd41f58852a2f12564d2503&language=en-US&query=${query}&page=1&include_adult=false`
-      )
-      .then(res => this.setState({ searchResults: res.data.results }))
-      .catch(err => console.log(err));
-  };
   componentDidMount() {
-    this.getSearchResults();
+    const { query } = queryString.parse(this.props.location.search);
+    this.props.getSearchResults(query);
   }
 
   render() {
     const { query } = queryString.parse(this.props.location.search);
-    const { searchResults } = this.state;
-    console.log(searchResults);
+    const { searchResults } = this.props;
 
     return (
       <div className="container text-white text-center ">
@@ -94,4 +86,14 @@ export class SearchResults extends Component {
   }
 }
 
-export default SearchResults;
+const mapStateToProps = state => ({
+  searchResults: state.search.results
+});
+
+export default connect(
+  mapStateToProps,
+  {
+    getSearchResults,
+    getDetails
+  }
+)(SearchResults);

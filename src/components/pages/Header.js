@@ -17,7 +17,7 @@ class Header extends Component {
 
   onSearchSubmit = e => {
     e.preventDefault();
-    window.location.href = `/results/?query=${this.state.searchField}`;
+    window.location.href = `/mysearch/?query=${this.state.searchField}`;
   };
 
   render() {

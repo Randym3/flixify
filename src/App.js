@@ -24,7 +24,7 @@ export class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/details/:type/:id" component={Details} />
               <Route exact path="/tvdetails/:type/:id" component={TVDetails} />
-              <Route exact path="/results" component={SearchResults} />
+              <Route exact path="/mysearch" component={SearchResults} />
               <Route exact path="/about" component={About} />
             </Switch>
           </BrowserRouter>

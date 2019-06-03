@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/flixify/precache-manifest.6c5acb5a9018573991cc60e1ad5172fd.js"
+  "/flixify/precache-manifest.c4f3f434d5110cfdbd50fe15bec0e8f6.js"
 );
 
 self.addEventListener('message', (event) => {

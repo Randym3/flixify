@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/flixify/static/css/main.1e6f3150.chunk.css",
-    "main.js": "/flixify/static/js/main.02ea9723.chunk.js",
-    "main.js.map": "/flixify/static/js/main.02ea9723.chunk.js.map",
+    "main.js": "/flixify/static/js/main.3794e832.chunk.js",
+    "main.js.map": "/flixify/static/js/main.3794e832.chunk.js.map",
     "runtime~main.js": "/flixify/static/js/runtime~main.6493c70a.js",
     "runtime~main.js.map": "/flixify/static/js/runtime~main.6493c70a.js.map",
     "static/css/2.bc131c05.chunk.css": "/flixify/static/css/2.bc131c05.chunk.css",
     "static/js/2.782f7e24.chunk.js": "/flixify/static/js/2.782f7e24.chunk.js",
     "static/js/2.782f7e24.chunk.js.map": "/flixify/static/js/2.782f7e24.chunk.js.map",
     "index.html": "/flixify/index.html",
-    "precache-manifest.6c5acb5a9018573991cc60e1ad5172fd.js": "/flixify/precache-manifest.6c5acb5a9018573991cc60e1ad5172fd.js",
+    "precache-manifest.c4f3f434d5110cfdbd50fe15bec0e8f6.js": "/flixify/precache-manifest.c4f3f434d5110cfdbd50fe15bec0e8f6.js",
     "service-worker.js": "/flixify/service-worker.js",
     "static/css/2.bc131c05.chunk.css.map": "/flixify/static/css/2.bc131c05.chunk.css.map",
     "static/css/main.1e6f3150.chunk.css.map": "/flixify/static/css/main.1e6f3150.chunk.css.map",

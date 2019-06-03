@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/pages/Header";
 
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
 
@@ -18,7 +18,7 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <HashRouter>
+          <BrowserRouter>
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -27,7 +27,7 @@ export class App extends Component {
               <Route exact path="/mysearch" component={SearchResults} />
               <Route exact path="/about" component={About} />
             </Switch>
-          </HashRouter>
+          </BrowserRouter>
         </div>
       </Provider>
     );

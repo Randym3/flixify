@@ -21,11 +21,19 @@ export class App extends Component {
           <BrowserRouter>
             <Header />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/details/:type/:id" component={Details} />
-              <Route exact path="/tvdetails/:type/:id" component={TVDetails} />
-              <Route exact path="/mysearch" component={SearchResults} />
-              <Route exact path="/about" component={About} />
+              <Route exact path="/flixify" component={Home} />
+              <Route
+                exact
+                path="/flixify/details/:type/:id"
+                component={Details}
+              />
+              <Route
+                exact
+                path="/flixify/tvdetails/:type/:id"
+                component={TVDetails}
+              />
+              <Route exact path="/flixify/mysearch" component={SearchResults} />
+              <Route exact path="/flixify/about" component={About} />
             </Switch>
           </BrowserRouter>
         </div>

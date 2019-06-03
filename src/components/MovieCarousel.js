@@ -70,7 +70,7 @@ export default class MovieCarousel extends Component {
                       right: "25%"
                     }}
                     className="btn btn-success"
-                    to={`/details/${this.props.type}/${cur.id}/`}
+                    to={`/flixify/details/${this.props.type}/${cur.id}/`}
                   >
                     Get Details
                   </Link>
@@ -83,7 +83,7 @@ export default class MovieCarousel extends Component {
                       right: "25%"
                     }}
                     className="btn btn-success"
-                    to={`/tvdetails/${this.props.type}/${cur.id}/`}
+                    to={`/flixify/tvdetails/${this.props.type}/${cur.id}/`}
                   >
                     Get Details
                   </Link>

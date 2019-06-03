@@ -17,7 +17,7 @@ class Header extends Component {
 
   onSearchSubmit = e => {
     e.preventDefault();
-    window.location.href = `/mysearch/?query=${this.state.searchField}`;
+    window.location.href = `/flixify/mysearch/?query=${this.state.searchField}`;
   };
 
   render() {
@@ -29,7 +29,7 @@ class Header extends Component {
         bg="warning"
         variant="light"
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/flixify/">
           <img
             src={logo}
             width="50"
@@ -42,11 +42,11 @@ class Header extends Component {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
-            <Link to="/" className="nav-link">
+            <Link to="/flixify/" className="nav-link">
               Home
             </Link>
 
-            <Link to="/about" className="nav-link">
+            <Link to="/flixify/about" className="nav-link">
               About
             </Link>
           </Nav>

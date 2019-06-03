@@ -69,7 +69,7 @@ export class SearchResults extends Component {
                   <Link
                     style={{ position: "relative", bottom: "300px" }}
                     className="btn btn-success"
-                    to={`/${
+                    to={`/flixify/${
                       cur.media_type === "tv" ? "tvdetails" : "details"
                     }/${cur.media_type}/${cur.id}/`}
                   >

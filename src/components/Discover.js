@@ -45,7 +45,7 @@ export class Discover extends Component {
                 >
                   {cur.overview}
                 </ReadMoreAndLess>
-                <Link to={`/details/movie/${cur.id}/`}>
+                <Link to={`/flixify/details/movie/${cur.id}/`}>
                   <Button className="m-2" variant="success">
                     Get Details
                   </Button>

@@ -48,7 +48,7 @@ export class SearchResults extends Component {
                   }}
                   src={
                     cur.poster_path
-                      ? `http://image.tmdb.org/t/p/original/${cur.poster_path}`
+                      ? `https://image.tmdb.org/t/p/original/${cur.poster_path}`
                       : noImage
                   }
                 />

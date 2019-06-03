@@ -23,7 +23,7 @@ export class CastList extends Component {
                 }}
                 src={
                   cur.profile_path
-                    ? `http://image.tmdb.org/t/p/original/${cur.profile_path}`
+                    ? `https://image.tmdb.org/t/p/original/${cur.profile_path}`
                     : noImage
                 }
               />

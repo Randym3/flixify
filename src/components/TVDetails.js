@@ -49,7 +49,7 @@ export class Details extends Component {
       <div
         className="banner-gradient-details  text-light "
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,53,0.7),rgba(0,0,53,0.7)),url(http://image.tmdb.org/t/p/original/${
+          backgroundImage: `linear-gradient(rgba(0,0,53,0.7),rgba(0,0,53,0.7)),url(https://image.tmdb.org/t/p/original/${
             details.backdrop_path
           })`
         }}
@@ -67,7 +67,7 @@ export class Details extends Component {
                 width="225"
                 src={
                   details.poster_path
-                    ? `http://image.tmdb.org/t/p/original/${
+                    ? `https://image.tmdb.org/t/p/original/${
                         details.poster_path
                       }`
                     : noImage
@@ -151,7 +151,7 @@ export class Details extends Component {
                       variant="top"
                       src={
                         cur.poster_path
-                          ? `http://image.tmdb.org/t/p/original/${
+                          ? `https://image.tmdb.org/t/p/original/${
                               cur.poster_path
                             }`
                           : noImage

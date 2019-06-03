@@ -33,7 +33,7 @@ export default class MovieCarousel extends Component {
                   variant="top"
                   src={
                     cur.poster_path
-                      ? `http://image.tmdb.org/t/p/original/${cur.poster_path}`
+                      ? `https://image.tmdb.org/t/p/original/${cur.poster_path}`
                       : noImage
                   }
                 />

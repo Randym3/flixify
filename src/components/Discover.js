@@ -21,7 +21,7 @@ export class Discover extends Component {
               key={cur.id}
               className="banner-gradient text-left   text-light"
               style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(http://image.tmdb.org/t/p/original/${
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://image.tmdb.org/t/p/original/${
                   cur.backdrop_path
                 })`
               }}

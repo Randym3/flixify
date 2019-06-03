@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d8d888fa32801bc4fd96e1568da7a70e",
+    "revision": "efe012807f21923859a8a9252c8bbe0c",
     "url": "/flixify/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flixify/static/css/2.bc131c05.chunk.css"
   },
   {
-    "revision": "bcdd9afd47ddc34aebea",
+    "revision": "84a4df2ef7bdd8775483",
     "url": "/flixify/static/css/main.1e6f3150.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flixify/static/js/2.bc8494dd.chunk.js"
   },
   {
-    "revision": "bcdd9afd47ddc34aebea",
-    "url": "/flixify/static/js/main.a9666556.chunk.js"
+    "revision": "84a4df2ef7bdd8775483",
+    "url": "/flixify/static/js/main.a89fdf27.chunk.js"
   },
   {
     "revision": "fcf3c764c0cc2889f7d6",

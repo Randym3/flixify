@@ -12,7 +12,7 @@ export default class MovieCarousel extends Component {
 
   render() {
     const { movies } = this.props;
-    console.log(movies);
+
     return (
       <div className="p-2 ">
         <h1

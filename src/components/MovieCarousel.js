@@ -21,7 +21,7 @@ export default class MovieCarousel extends Component {
         >
           {this.props.title}
         </h1>
-        <Slider {...SliderSettings}>
+        <Slider className="mx-4" {...SliderSettings}>
           {movies.map((cur, i) => {
             return cur.backdrop_path ? (
               <Card

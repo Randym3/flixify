@@ -32,8 +32,8 @@ class Header extends Component {
         <Navbar.Brand href="/">
           <img
             src={logo}
-            width="50"
-            height="35"
+            width="120"
+            height="50"
             className="mx-2 "
             alt="TMDB Logo "
           />

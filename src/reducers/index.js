@@ -5,7 +5,7 @@ import detailsReducer from "./detailsReducer";
 import searchReducer from "./searchReducer";
 
 export default combineReducers({
-  home: homeReducer,
-  details: detailsReducer,
-  search: searchReducer
+	home: homeReducer,
+	details: detailsReducer,
+	search: searchReducer
 });

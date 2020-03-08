@@ -6,6 +6,8 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
